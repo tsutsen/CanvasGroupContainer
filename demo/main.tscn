@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://dudqbt7oyscrv"]
+
+[ext_resource type="Texture2D" uid="uid://dogp8mduy245g" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="Shader" uid="uid://diric3i50psk8" path="res://canvas_group.gdshader" id="2_h2yge"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h2yge"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0xm2m"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7mycd"]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
+shader = ExtResource("2_h2yge")
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+material = SubResource("CanvasItemMaterial_h2yge")
+layout_mode = 0
+offset_left = 172.0
+offset_top = 279.0
+offset_right = 300.0
+offset_bottom = 407.0
+texture = ExtResource("1_0xm2m")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+material = SubResource("CanvasItemMaterial_0xm2m")
+layout_mode = 0
+offset_left = 213.0
+offset_top = 244.0
+offset_right = 341.0
+offset_bottom = 372.0
+texture = ExtResource("1_0xm2m")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+material = SubResource("CanvasItemMaterial_7mycd")
+layout_mode = 0
+offset_left = 242.0
+offset_top = 210.0
+offset_right = 370.0
+offset_bottom = 338.0
+texture = ExtResource("1_0xm2m")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.5
+offset_right = 101.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Default Control Rendering"
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+
+[node name="CanvasGroupContainer" type="CanvasGroupContainer" parent="."]
+material = SubResource("ShaderMaterial_lquwl")
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasGroupContainer"]
+layout_mode = 2
+offset_left = 172.0
+offset_top = 279.0
+offset_right = 300.0
+offset_bottom = 407.0
+texture = ExtResource("1_0xm2m")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasGroupContainer"]
+material = SubResource("CanvasItemMaterial_0xm2m")
+layout_mode = 2
+offset_left = 213.0
+offset_top = 244.0
+offset_right = 341.0
+offset_bottom = 372.0
+texture = ExtResource("1_0xm2m")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasGroupContainer"]
+material = SubResource("CanvasItemMaterial_7mycd")
+layout_mode = 2
+offset_left = 242.0
+offset_top = 210.0
+offset_right = 370.0
+offset_bottom = 338.0
+texture = ExtResource("1_0xm2m")
+
+[node name="Label" type="Label" parent="CanvasGroupContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.5
+offset_right = 101.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CanvasGroup Rendering"

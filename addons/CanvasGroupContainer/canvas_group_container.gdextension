@@ -1,0 +1,13 @@
+[configuration]
+entry_symbol = "canvas_group_container_library_init"
+compatibility_minimum = "4.1"
+reloadable = true
+
+[libraries]
+macos.debug = "res://bin/libcanvasgroupcontainer.macos.template_debug.framework"
+macos.release = "res://bin/libcanvasgroupcontainer.macos.template_release.framework"
+windows.debug.x86_64 = "res://bin/libcanvasgroupcontainer.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://bin/libcanvasgroupcontainer.windows.template_release.x86_64.dll"
+
+[icons]
+CanvasGroupContainer = "res://canvas_group_container.svg"
